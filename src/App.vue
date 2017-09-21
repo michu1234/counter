@@ -9,7 +9,7 @@
     <section class="counter__box">
     <div class="counter__background"><p class="counter__numbers">{{this.time}}</p></div>
     <p class="counter__text" v-text=this.msg>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque optio placeat est obcaecati deleniti ratione commodi aperiam exercitationem sint dolore ut error dignissimos voluptas aliquam reprehenderit corporis debitis, aut at ipsum ullam accusantium. Eligendi dolorem numquam illo obcaecati harum quisquam? Aut est, molestias velit eum, ut iure pariatur. Explicabo impedit iure atque, commodi ex. Quos magnam harum ab error quaerat, qui consectetur! Ad perspiciatis, voluptatibus nesciunt pariatur. Nam aliquam dignissimos repudiandae neque adipisci voluptatibus inventore excepturi rerum atque consectetur ipsa dolorem, quisquam perspiciatis. Libero quos dolor error totam tenetur, sapiente dignissimos ipsum sunt doloremque omnis, veritatis ex iste doloribus illum eveniet eius, porro? Facere ab a, dignissimos debitis dolor aperiam dolorum ipsum placeat quibusdam fugit sed rerum mollitia totam doloribus.</p>
-   <img src="/img/warstwa-3.png" alt="" class="counter__image">
+   <img src="../src/img/warstwa3.png" alt="" class="counter__image">
    </section>
   </main>
 </template>
@@ -114,7 +114,7 @@
   }
 
   .counter__box {
-    background-image: url(../img/warstwa-2.png);
+    background-image: url(../src/img/warstwa2.png);
     background-position: left top;
     background-repeat: no-repeat;
     background-size: contain;
