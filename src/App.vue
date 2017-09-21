@@ -1,7 +1,7 @@
 <template>
   <main id="counter">
     <section class="counter__form">
-      <input id="time" type="number" required placeholder="Number from 1 to 99...">
+      <input id="time" type="number" required placeholder="Time in seconds (1-99)">
       <button class="myButton" @click="updateTime">Submit Time</button>
       <input id="text" type="text" required placeholder="Once upon a time...">
       <button class="myButton" @click="updateText">Add Text</button>
@@ -15,13 +15,14 @@
 </template>
 
 <script>
+
   export default {
     name: 'counter',
     data() {
       return {
         placeholder: 'Once upon a time...',
         msg: 'Wszystkie miejsca zostały zajęte. Rozstrzygnięcie konkursu za:',
-        time: '',
+        time: '00',
         decrease: '',
         multiplier: 0.062831, // Math.PI * 2
         startAngleFrom: ''
@@ -75,13 +76,14 @@
 
         svg.append('path').attr('d', arc).attr("stroke", "#1c232e").attr('fill', '#394d6c').attr('transform', 'translate(100,100)');
 
-        svg.append('path').attr('d', arc2).attr("fill", "pink").attr('transform', 'translate(100,100)');
+        svg.append('path').attr('d', arc2).attr("fill", "#ffffff").attr('transform', 'translate(100,100)');
       }
     }
   }
 </script>
 
 <style>
+
   html {
     font-size: 62.5%;
     font-family: Arial;
@@ -91,6 +93,24 @@
     background-color: #151c27;
     color: #ffffff;
     font: normal 1.6rem/1.6rem Arial, sans-serif;
+  }
+
+  p {
+    padding: 20px 21% 20px 21%;
+    font: normal 1.6rem/2rem 'Montserrat', sans-serif;
+  }
+
+  svg {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+  }
+
+  input {
+    background-color: #1e2633;
+    padding-left: 10px;
+    color: #ffffff;
+    border: 2px solid #000000;
   }
 
   .counter__box {
@@ -113,16 +133,6 @@
     left: 0;
   }
 
-  p {
-    padding: 20px 21% 20px 21%;
-  }
-
-  svg {
-    position: absolute;
-    right: -40px;
-    top: -40px;
-  }
-
   .counter__form {
     display: flex;
   }
@@ -137,6 +147,22 @@
     top: -50px;
     box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.5);
     background-color: #1e2633;
+  }
+
+  .counter__numbers {
+    font: bold 4rem/4rem Arial, sans-serif;
+    text-align: center;
+  }
+  .counter__text {
+    text-align: justify;
+    padding: 60px 180px 30px 180px;
+    min-height: 50px;
+  }
+
+  .counter__numbers::after {
+    content: " s";
+    color: #ffffff;
+    font-size: 19px;
   }
 
   .myButton {
@@ -178,21 +204,6 @@
     top: 1px;
   }
 
-  input {
-    background-color: #1e2633;
-    padding-left: 10px;
-    color: #ffffff;
-    border: 2px solid #000000;
-  }
-  .counter__numbers {
-    font: bold 4rem/4rem Arial, sans-serif;
-    text-align: center;
-  }
-  .counter__text {
-    text-align: justify;
-    padding: 60px 180px 20px 180px;
-    min-height: 40px;
-  }
 
   @media screen and (max-width: 900px){
     .counter__text {
